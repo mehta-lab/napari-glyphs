@@ -1,0 +1,48 @@
+name: plugin-sandbox
+display_name: napari sandbox
+contributions:
+  commands:
+    - id: plugin-sandbox.get_reader
+      python_name: plugin_sandbox._reader:napari_get_reader
+      title: Open data with napari sandbox
+    - id: plugin-sandbox.write_multiple
+      python_name: plugin_sandbox._writer:write_multiple
+      title: Save multi-layer data with napari sandbox
+    - id: plugin-sandbox.write_single_image
+      python_name: plugin_sandbox._writer:write_single_image
+      title: Save image data with napari sandbox
+    - id: plugin-sandbox.make_sample_data
+      python_name: plugin_sandbox._sample_data:make_sample_data
+      title: Load sample data from napari sandbox 
+    - id: plugin-sandbox.make_qwidget
+      python_name: plugin_sandbox._widget:ExampleQWidget
+      title: Make example QWidget
+    - id: plugin-sandbox.make_magic_widget
+      python_name: plugin_sandbox._widget:example_magic_widget
+      title: Make example magic widget
+    - id: plugin-sandbox.make_func_widget
+      python_name: plugin_sandbox._widget:example_function_widget
+      title: Make example function widget 
+  readers:
+    - command: plugin-sandbox.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy'] 
+  writers:
+    - command: plugin-sandbox.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: plugin-sandbox.write_single_image
+      layer_types: ['image']
+      filename_extensions: ['.npy'] 
+  sample_data:
+    - command: plugin-sandbox.make_sample_data
+      display_name: napari sandbox
+      key: unique_id.1 
+  widgets:
+    - command: plugin-sandbox.make_qwidget
+      display_name: Example QWidget
+    - command: plugin-sandbox.make_magic_widget
+      display_name: Example Magic Widget
+    - command: plugin-sandbox.make_func_widget
+      autogenerate: true
+      display_name: Example Function Widget 
