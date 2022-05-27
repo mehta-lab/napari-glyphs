@@ -1,0 +1,10 @@
+name: napari-glyphs
+display_name: napari glyphs
+contributions:
+  commands:
+   - id: napari-glyphs.make_qwidget
+     python_name: napari_glyphs._widget:ExampleQWidget
+     title: Make example QWidget
+  widgets:
+    - command: napari-glyphs.make_qwidget
+      display_name: Main Menu
