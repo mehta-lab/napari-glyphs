@@ -14,8 +14,7 @@ You can install `napari-glyphs` with:
     conda create -y -n napari-glyphs python
     conda activate napari-glyphs
     git clone https://github.com/mehta-lab/napari-glyphs.git
-    cd napari-glyphs
-    pip install -e . # installs napari, will take a minute
+    pip install -e ./napari-glyphs # installs napari>=0.4.16, will take a minute
     napari -w napari-glyphs
 
 ## License
