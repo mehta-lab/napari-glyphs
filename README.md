@@ -1,6 +1,6 @@
 # napari-glyphs
 
-A minimal (and slow) working example of glyphs in napari hacked together using the Shapes layer. 
+A minimal working example of glyphs in napari hacked together using the Shapes layer. 
 
 ![Flow Chart](demo.gif)
 
